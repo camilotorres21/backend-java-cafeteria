@@ -135,7 +135,7 @@ public class App {
                                 System.out.println("Ingrese la contraseña del nuevo empleado:");
                                 String contraseñaEmpleadoNuevo = scanner.nextLine();
                                 cafeteria.crearEmpleado(nombreEmpleado, identificacionEmpleado, cargoEmpleado, contraseñaEmpleadoNuevo);
-                                
+
                             }
                             case 11 -> {
                                 // Ver empleados
