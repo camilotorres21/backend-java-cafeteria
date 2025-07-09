@@ -58,32 +58,40 @@ public class App {
                         switch (opcionEmpleado) {
                             case 1 -> {
                                 // Agregar producto al menú
-                                System.out.println("Ingrese el nombre del producto:");
+                                System.out.println("\n___________________________________");
+                                System.out.println("  Ingrese el nombre del producto:");
                                 String nombreProducto = scanner.nextLine();
-                                System.out.println("Ingrese el precio del producto:");
+                                System.out.println("  Ingrese el precio del producto:");
                                 double precioProducto = scanner.nextDouble();
                                 scanner.nextLine(); // Limpiar el buffer del scanner
+                                System.out.println("-----------------------------------");
                                 cafeteria.agregarProducto(nombreProducto, precioProducto);
                             }
                             case 2 -> {
                                 // Eliminar producto del menú
-                                System.out.println("Ingrese el nombre del producto a eliminar:");
+                                System.out.println("\n____________________________________________");
+                                System.out.println(" Ingrese el nombre del producto a eliminar:");
                                 String nombreProducto = scanner.nextLine();
+                                System.out.println("--------------------------------------------");
                                 cafeteria.eliminarProducto(nombreProducto);
                             }
                             case 3 -> {
                                 // Modificar producto del menú
-                                System.out.println("\nIngrese el nombre del producto a modificar:");
+                                System.out.println("\n_______________________________________________");
+                                System.out.println("  Ingrese el nombre del producto a modificar:");
                                 String nombreProducto = scanner.nextLine();
+                                System.out.println("-----------------------------------------------");
                                 if (cafeteria.buscarProducto(nombreProducto) == -1) {
-                                    System.out.println("\nProducto no encontrado en el menú.");
+                                    System.out.println("\n...Producto no encontrado en el menú...");
                                     continue; // Volver al menú sin modificar
                                 }
-                                System.out.println("\nIngrese el nuevo nombre del producto:");
+                                System.out.println("\n___________________________________________");
+                                System.out.println("   Ingrese el nuevo nombre del producto:");
                                 String nuevoNombre = scanner.nextLine();
                                 System.out.println("Ingrese el nuevo precio del producto:");
                                 double nuevoPrecio = scanner.nextDouble();
                                 scanner.nextLine(); // Limpiar el buffer del scanner
+                                System.out.println("-------------------------------------------");
                                 cafeteria.modificarProducto(nombreProducto, nuevoNombre, nuevoPrecio);
                             }
                             case 4 -> {

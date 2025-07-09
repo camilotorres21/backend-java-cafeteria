@@ -14,8 +14,8 @@ public class Cafeteria {
         this.pedidos = new ArrayList<>();
         this.clientes = new ArrayList<>();
         this.empleados = new ArrayList<>();
-        menuProductos.add(new Producto("Café", 1.50));
-        menuProductos.add(new Producto("Té", 1.20));
+        menuProductos.add(new Producto("Cafe", 1.50));
+        menuProductos.add(new Producto("Te", 1.20));
         menuProductos.add(new Producto("Pastel", 2.50));
         menuProductos.add(new Producto("Galleta", 0.80));
         empleados.add(new Empleado("Admon", "1234", "Administrador", "Camtor95*"));
@@ -92,12 +92,15 @@ public class Cafeteria {
 
     public void mostrarMenu() {
         if (menuProductos.isEmpty()) {
-            System.out.println("El menú está vacío.");
+            System.out.println("   ...El menú está vacío...");
         } else {
-            System.out.println("Menú de Productos:");
+            System.out.println("\n__________________________________");
+            System.out.println("        Menú de Productos:");
+            System.out.println("----------------------------------");
             for (Producto producto : menuProductos) {
                 System.out.println("- " + producto.getNombre() + ": $" + producto.getPrecio());
             }
+            System.out.println("----------------------------------");
         }
 
     }
@@ -116,21 +119,22 @@ public class Cafeteria {
             if (producto.getNombre().equalsIgnoreCase(nombreProducto)) {
                 producto.setNombre(nuevoNombre);
                 producto.setPrecio(nuevoPrecio);
-                System.out.println("Producto modificado: " + nuevoNombre + " - $" + nuevoPrecio);
+                System.out.println("  ...Producto modificado: " + nuevoNombre + " - $" + nuevoPrecio + "...");
                 return;
             }
         }
-        System.out.println("Producto no encontrado: " + nombreProducto);
+        System.out.println("     ...Producto no encontrado: " + nombreProducto + "...");
     }
 
     public void eliminarProducto(String nombreProducto) {
         for (int i = 0; i < menuProductos.size(); i++) {
             if (menuProductos.get(i).getNombre().equalsIgnoreCase(nombreProducto)) {
                 menuProductos.remove(i);
+                System.out.println("     ...Producto eliminado con éxito...");
                 return; // Salir del método después de eliminar el producto
             }
         }
-        System.out.println("Producto no encontrado: " + nombreProducto);
+        System.out.println("     ...Producto no encontrado: " + nombreProducto + "...");
     }
 
     // CRUD Pedidos-----------------------------------------------------------------------------------
@@ -266,7 +270,10 @@ public class Cafeteria {
     public boolean loginEmpleado(String nombre, String contraseña) {
         for (Empleado empleado : empleados) {
             if (empleado.getNombre().equalsIgnoreCase(nombre) && empleado.getContraseña().equals(contraseña)) {
-                System.out.println("\nBienvenido " + empleado.getNombre() + " - Cargo: " + empleado.getCargo());
+                System.out.println("\n____________________________________________");
+                System.out.println("Bienvenido " + empleado.getNombre() + " - Cargo: " + empleado.getCargo());
+                System.out.println("--------------------------------------------");
+                System.out.println("    ...Sesión iniciada correctamente....");
                 return true; // Retorna true si las credenciales son correctas
             }
         }
@@ -282,8 +289,8 @@ public class Cafeteria {
 
     // Format Menus de opciones
     public void mostrarMenuEmpleado(String nombreEmpleado, String esAdministrador) {
-
-        System.out.println("\n     Seleccione una opción:");
+        System.out.println("\n________________________________");
+        System.out.println("      Seleccione una opción:");
         System.out.println("--------------------------------");
         System.out.println("1. Agregar producto al menú");
         System.out.println("2. Eliminar producto del menú");
@@ -300,7 +307,6 @@ public class Cafeteria {
             System.out.println("12. Eliminar empleado");
         }
         System.out.println("--------------------------------");
-
 
     }
 
