@@ -1,18 +1,21 @@
-## Getting Started
+# Backend Java - Cafetería
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+This is a backend-oriented project developed in Java, aimed at reinforcing core concepts of Object-Oriented Programming (OOP) and exception handling through practical implementation.
 
-## Folder Structure
+## 🚀 Project Objectives
 
-The workspace contains two folders by default, where:
+- Practice key OOP principles (encapsulation, inheritance, polymorphism, abstraction)
+- Implement structured exception handling
+- Simulate real-world backend logic
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## 📁 Technologies Used
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+- Java SE
+- Git & GitHub
+- Visual Studio Code
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## 🔧 How to Run
 
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/camilotorres21/backend-java-cafeteria.git
