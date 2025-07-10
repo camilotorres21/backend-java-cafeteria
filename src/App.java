@@ -22,6 +22,7 @@ public class App {
             System.out.println("2. Cliente");
             System.out.println("3. Finalizar Programa");
             System.out.println("---------------------------------");
+            System.out.println("---");
             System.out.print("Ingrese una opción: ");
             while (true) {
                 try {
