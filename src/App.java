@@ -88,7 +88,7 @@ public class App {
                                 System.out.println("\n___________________________________________");
                                 System.out.println("   Ingrese el nuevo nombre del producto:");
                                 String nuevoNombre = scanner.nextLine();
-                                System.out.println("Ingrese el nuevo precio del producto:");
+                                System.out.println("   Ingrese el nuevo precio del producto:");
                                 double nuevoPrecio = scanner.nextDouble();
                                 scanner.nextLine(); // Limpiar el buffer del scanner
                                 System.out.println("-------------------------------------------");
