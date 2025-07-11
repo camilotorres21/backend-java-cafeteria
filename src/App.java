@@ -108,12 +108,15 @@ public class App {
                             }
                             case 7 -> {
                                 // Actualizar datos del empleado
-                                System.out.println("Ingrese su nuevo nombre de usuario:");
+                                System.out.println("\n_________________________________________");
+                            
+                                System.out.println("   Ingrese su nuevo nombre de usuario:");
                                 String nuevoNombreUsuario = scanner.nextLine();
-                                System.out.println("Ingrese su nueva identificación:");
+                                System.out.println("     Ingrese su nueva identificación:");
                                 String nuevaIdentificacion = scanner.nextLine();
-                                System.out.println("Ingrese su nuevo cargo:");
+                                System.out.println("          Ingrese su nuevo cargo:");
                                 String nuevoCargo = scanner.nextLine();
+                                System.out.println("-----------------------------------------");
                                 cafeteria.modificarEmpleado(nombreUsuario, nuevoNombreUsuario, nuevaIdentificacion, nuevoCargo);
                                 nombreUsuario = nuevoNombreUsuario; // Actualizar el nombre de usuario en caso de cambio
                             }
